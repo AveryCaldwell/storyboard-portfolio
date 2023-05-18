@@ -14,15 +14,17 @@ function About(props) {
                 <ThemeProvider theme={theme}>
                     {/* FIXME : theming */}
 
-                    {/* <Material.Card>About</Material.Card> */}
-
-                    <Material.Stack
-                        marginTop='10%'
-                        position='relative'
-                        direction='row'
-                        justifyContent='center'
-                        alignItems='center'
-                        spacing={2}
+                    <Material.Grid
+                        sx={{
+                            p: 5,
+                            mx: 'auto',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'space-evenly',
+                            alignItem: 'center',
+                            position: 'absolute',
+                            flexGrow: 1,
+                        }}
                     >
                         <h1>About</h1>
                         <p>
@@ -96,7 +98,7 @@ function About(props) {
                             objectives into actionable code, fostering seamless
                             collaboration and efficient project execution.
                         </p>
-                    </Material.Stack>
+                    </Material.Grid>
                 </ThemeProvider>
             )}
         </React.Fragment>

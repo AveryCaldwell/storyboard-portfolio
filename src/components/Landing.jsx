@@ -67,7 +67,7 @@ function Landing(props) {
                                     justifyContent: 'center',
                                     overflow: 'hidden',
                                     flexDirection: 'column',
-                                    whiteSpace: 'pre',
+                                    // whiteSpace: 'pre',
                                 }}
                             >
                                 <Material.Typography
