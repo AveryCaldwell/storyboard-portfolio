@@ -13,7 +13,9 @@ function About(props) {
             {props.currentPage === 'About' && (
                 <ThemeProvider theme={theme}>
                     {/* FIXME : theming */}
-                    <Material.Card>About</Material.Card>
+                    <Material.Container>
+                        <Material.Card>About</Material.Card>
+                    </Material.Container>
                 </ThemeProvider>
             )}
         </React.Fragment>

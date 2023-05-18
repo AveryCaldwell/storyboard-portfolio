@@ -18,33 +18,35 @@ function Landing(props) {
                     <>
                         {/*  Landing content section */}
                         {/* FIXME : theming */}
-                        <Material.Card
-                            mt={2}
-                            sx={{
-                                border: '1px  grey',
-                                '&:hover': {
-                                    opacity: [0.9, 0.8, 0.7],
-                                },
-                            }}
-                        >
-                            {/* FIXME : theming */}
-                            <h1 className='text-4xl md:text-7xl dark:text-white mb-1 md:mb-3 font-bold'>
-                                "Hi, I'm Avery
-                            </h1>
-                            {/* FIXME : theming */}
-                            <p className='text-base md:text-xl mb-3 font-medium'>
-                                Creative Thinker + Full Stack Web Developer"
-                            </p>
-                            <div>
+                        <Material.Container>
+                            <Material.Card
+                                mt={2}
+                                sx={{
+                                    border: '1px  grey',
+                                    '&:hover': {
+                                        opacity: [0.9, 0.8, 0.7],
+                                    },
+                                }}
+                            >
                                 {/* FIXME : theming */}
-                                <Material.Button
-                                    color='inherit'
-                                    onClick={() => handleClick()}
-                                >
-                                    Show more!
-                                </Material.Button>
-                            </div>
-                        </Material.Card>
+                                <h1 className='text-4xl md:text-7xl dark:text-white mb-1 md:mb-3 font-bold'>
+                                    "Hi, I'm Avery
+                                </h1>
+                                {/* FIXME : theming */}
+                                <p className='text-base md:text-xl mb-3 font-medium'>
+                                    Creative Thinker + Full Stack Web Developer"
+                                </p>
+                                <div>
+                                    {/* FIXME : theming */}
+                                    <Material.Button
+                                        color='inherit'
+                                        onClick={() => handleClick()}
+                                    >
+                                        Show more!
+                                    </Material.Button>
+                                </div>
+                            </Material.Card>
+                        </Material.Container>
                     </>
                 )}
             </ThemeProvider>
