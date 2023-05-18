@@ -24,6 +24,7 @@ function App() {
                 <div
                     className='App'
                     style={{
+                        // FIXME fix theme
                         backgroundColor: '#555',
                         width: '100vw',
                         height: '100vh',

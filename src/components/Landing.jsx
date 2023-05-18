@@ -1,8 +1,9 @@
 import React from 'react';
-import * as Material from '@mui/material';
-import { ThemeProvider } from '@mui/material/styles';
-import theme from '../theme';
+import avesLogo from '../assets/aves-pizza.png';
 //MUI
+import * as Material from '@mui/material';
+import theme from '../theme';
+import { ThemeProvider } from '@mui/material/styles';
 
 //  Function to render Landing component
 function Landing(props) {
@@ -11,42 +12,92 @@ function Landing(props) {
         console.log('handler');
         props.setCurrentPage('About');
     }
+    const mediaSize = Material.useMediaQuery('(min-width:900px)');
+    const mediaSmall = Material.useMediaQuery('(min-width:400px)');
     return (
         <React.Fragment>
             <ThemeProvider theme={theme}>
                 {props.currentPage === 'Landing' && (
                     <>
-                        {/*  Landing content section */}
-                        {/* FIXME : theming */}
-                        <Material.Container>
-                            <Material.Card
-                                mt={2}
+                        <Material.Card
+                            className='landingCard'
+                            sx={{
+                                display: mediaSize ? 'flex' : 'inline-block',
+                                mt: '150px',
+                                mx: 'auto',
+                                p: 5,
+                                maxWidth: '75%',
+                                height: '50vh',
+                                flexWrap: 'wrap',
+                                fontSize: '2rem',
+                                flexDirection: 'column',
+                            }}
+                        >
+                            {/* LOGO IMAGE*/}
+                            <Material.CardMedia
                                 sx={{
-                                    border: '1px  grey',
-                                    '&:hover': {
-                                        opacity: [0.9, 0.8, 0.7],
-                                    },
+                                    display: mediaSize ? 'flex' : 'none',
+                                    flexDirection: 'column',
+                                    mt: 'auto',
+                                    mb: 'auto',
+                                }}
+                                src={avesLogo}
+                                component='img'
+                                style={{
+                                    mt: '150px',
+                                    p: 5,
+                                    height: '250px',
+                                    width: '250px',
+                                    borderRadius: 300,
+                                    border: '2px solid #e9f4e9',
+                                    boxShadow: 2,
+                                    marginRight: 10,
+                                    cursor: 'pointer',
+                                }}
+                                title='Aves Logo'
+                                onClick={() => props.setCurrentPage('About')}
+                            />
+                            {/* FIXME : theming */}
+                            <Material.CardContent
+                                sx={{
+                                    mt: '150px',
+                                    textAlign: 'center',
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    overflow: 'hidden',
+                                    flexDirection: 'column',
+                                    whiteSpace: 'pre',
                                 }}
                             >
-                                {/* FIXME : theming */}
-                                <h1 className='text-4xl md:text-7xl dark:text-white mb-1 md:mb-3 font-bold'>
-                                    "Hi, I'm Avery
-                                </h1>
-                                {/* FIXME : theming */}
-                                <p className='text-base md:text-xl mb-3 font-medium'>
-                                    Creative Thinker + Full Stack Web Developer"
-                                </p>
-                                <div>
+                                <Material.Typography
+                                    gutterBottom
+                                    variant='h5'
+                                    component='div'
+                                >
+                                    {/* FIXME add some type of color or animation to name */}
+                                    Hi, I'm Avery
+                                </Material.Typography>
+                                <Material.Typography
+                                    variant='body2'
+                                    color='text.secondary'
+                                >
+                                    Creative Thinker + Full Stack Web Developer
+                                </Material.Typography>
+                                <br />
+                                <Material.CardActions>
                                     {/* FIXME : theming */}
+                                    {/* Button */}
                                     <Material.Button
-                                        color='inherit'
+                                        variant='contained'
                                         onClick={() => handleClick()}
                                     >
-                                        Show more!
+                                        Show more{' '}
                                     </Material.Button>
-                                </div>
-                            </Material.Card>
-                        </Material.Container>
+                                </Material.CardActions>
+                            </Material.CardContent>
+                        </Material.Card>
+                        {/* </Material.Box> */}
                     </>
                 )}
             </ThemeProvider>

@@ -138,7 +138,7 @@ function Header(props) {
     const mediaSmall = Material.useMediaQuery('(min-width:400px)');
     return (
         <header className='header'>
-            <Material.Box sx={{ flexGrow: 1, minHeight: 600 }}>
+            <Material.Box sx={{ flexGrow: 1 }}>
                 <Material.AppBar position='fixed' sx={{ height: '64px' }}>
                     {/* Logo image */}
                     <Material.Toolbar>
@@ -148,7 +148,7 @@ function Header(props) {
                                 height: '50px',
                                 width: '50px',
                                 // FIXME: theming
-                                backgroundColor: '#c9e4ca',
+                                backgroundColor: 'dark',
                                 borderRadius: 300,
                                 border: '2px solid #e9f4e9',
                                 boxShadow: 2,
@@ -166,7 +166,6 @@ function Header(props) {
                                 marginRight: 'auto',
                                 left: 0,
                                 // FIXME: theming
-                                color: 'white',
                                 fontWeight: 'light',
                                 cursor: 'pointer',
                             }}
