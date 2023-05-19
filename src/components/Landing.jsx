@@ -13,7 +13,7 @@ function Landing(props) {
         props.setCurrentPage('About');
     }
     const mediaSize = Material.useMediaQuery('(min-width:900px)');
-    const mediaSmall = Material.useMediaQuery('(min-width:400px)');
+    const mediaSmall = Material.useMediaQuery('(min-width:600px)');
     return (
         <React.Fragment>
             <ThemeProvider theme={theme}>
@@ -22,14 +22,14 @@ function Landing(props) {
                         <Material.Card
                             className='landingCard'
                             sx={{
-                                display: mediaSize ? 'flex' : 'inline-block',
+                                display: mediaSize ? 'flex' : 'block',
                                 mt: '150px',
                                 mx: 'auto',
                                 p: 5,
-                                maxWidth: '75%',
-                                height: '50vh',
-                                flexWrap: 'wrap',
-                                fontSize: '2rem',
+                                maxWidth: '900px',
+                                minWidth: '400px',
+                                flexWrap: 'no-wrap',
+                                fontSize: '30px',
                                 flexDirection: 'column',
                             }}
                         >
@@ -37,21 +37,19 @@ function Landing(props) {
                             <Material.CardMedia
                                 sx={{
                                     display: mediaSize ? 'flex' : 'none',
-                                    flexDirection: 'column',
-                                    mt: 'auto',
-                                    mb: 'auto',
+                                    mx: 'auto',
                                 }}
                                 src={avesLogo}
                                 component='img'
                                 style={{
                                     mt: '150px',
+                                    mx: 'auto',
                                     p: 5,
                                     height: '250px',
                                     width: '250px',
                                     borderRadius: 300,
                                     border: '2px solid #e9f4e9',
                                     boxShadow: 2,
-                                    marginRight: 10,
                                     cursor: 'pointer',
                                 }}
                                 title='Aves Logo'
@@ -60,14 +58,13 @@ function Landing(props) {
                             {/* FIXME : theming */}
                             <Material.CardContent
                                 sx={{
-                                    mt: '150px',
                                     textAlign: 'center',
                                     alignItems: 'center',
                                     display: 'flex',
                                     justifyContent: 'center',
                                     overflow: 'hidden',
                                     flexDirection: 'column',
-                                    // whiteSpace: 'pre',
+                                    wordWrap: 'break-word', // Added this line
                                 }}
                             >
                                 <Material.Typography
