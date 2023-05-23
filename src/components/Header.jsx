@@ -22,14 +22,29 @@ const data = [
   { name: "Resume", icon: <DescriptionOutlinedIcon /> },
   { name: "Skills", icon: <FolderCopyOutlinedIcon /> },
 ];
+
+const menuStyle = [
+  {
+    fontSize: "10px",
+    // FIXME: theming 
+    color: 'light',
+    textAlign: "center",
+    padding: "5px",
+    minWidth: "20px",
+  },
+];
+
+
 function Header(props) {
   const mediaSmall = Material.useMediaQuery("(min-width:400px)");
   const [open, setOpen] = useState(false);
   const getList = () => (
     <div style={{ width: 120 }} onClick={() => setOpen(false)}>
       {data.map((item, index) => (
-        <Material.ListItem button key={index}>
-          <Material.ListItemIcon>{item.icon}</Material.ListItemIcon>
+        <Material.ListItem button key={index} sx={menuStyle}>
+          <Material.ListItemIcon sx={menuStyle}>
+            {item.icon}
+          </Material.ListItemIcon>
           <Material.ListItemText primary={item.name} />
         </Material.ListItem>
       ))}
@@ -38,29 +53,34 @@ function Header(props) {
 
   return (
     <>
-      <Material.Button onClick={() => setOpen(true)}>Click me</Material.Button>
       <Material.Drawer
         variant="permanent"
         open={open}
         anchor={"left"}
         onClose={() => setOpen(false)}
       >
-        {/* {___________LOGO_______} */}
-        <img
-          src={avesLogo}
-          style={{
-            height: "50px",
-            width: "50px",
-            backgroundColor: "dark",
-            borderRadius: 300,
-            border: "2px solid #e9f4e9",
-            boxShadow: 2,
-            marginLeft: "auto",
-            marginRight: "auto",
+        <Material.Box
+          sx={{
+            margin: 5,
             cursor: "pointer",
           }}
-          alt="AvesLogo"
-        />
+        >
+          <img
+            src={avesLogo}
+            style={{
+              height: "50px",
+              width: "50px",
+              backgroundColor: "dark",
+              borderRadius: 300,
+              border: "2px solid #e9f4e9",
+              boxShadow: 2,
+              marginLeft: "auto",
+              marginRight: "auto",
+              cursor: "pointer",
+            }}
+            alt="AvesLogo"
+          />
+        </Material.Box>
 
         <Material.Typography
           variant="h6"
@@ -75,10 +95,17 @@ function Header(props) {
         >
           <div
             style={{
-              display: mediaSmall ? "block" : "none",
+              display: "block",
+              fontSize: "14px",
+              position: "relative",
+              padding: "5px",
+              left: "15px",
+             
             }}
           >
-            <strong>Avery Caldwell</strong>
+            <strong >
+              Avery Caldwell
+            </strong>
           </div>
         </Material.Typography>
 
