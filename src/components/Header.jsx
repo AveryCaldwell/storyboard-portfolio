@@ -31,6 +31,7 @@ const menuStyle = [
     textAlign: "center",
     padding: "5px",
     minWidth: "20px",
+    marginTop: '8px',
   },
 ];
 
@@ -41,24 +42,30 @@ function Header(props) {
   const getList = () => (
     <div style={{ width: 120 }} onClick={() => setOpen(false)}>
       {data.map((item, index) => (
+        <Material.Box sx={menuStyle}>
+
         <Material.ListItem button key={index} sx={menuStyle}>
           <Material.ListItemIcon sx={menuStyle}>
             {item.icon}
           </Material.ListItemIcon>
           <Material.ListItemText primary={item.name} />
         </Material.ListItem>
+        </Material.Box>
       ))}
     </div>
   );
 
   return (
     <>
+      
       <Material.Drawer
         variant="permanent"
         open={open}
         anchor={"left"}
         onClose={() => setOpen(false)}
       >
+
+        {/* ===============LOGO=============== */}
         <Material.Box
           sx={{
             margin: 5,
@@ -82,6 +89,7 @@ function Header(props) {
           />
         </Material.Box>
 
+        {/* ===============TOP MENU=============== */}
         <Material.Typography
           variant="h6"
           component="div"
@@ -95,11 +103,9 @@ function Header(props) {
         >
           <div
             style={{
-              display: "block",
               fontSize: "14px",
-              position: "relative",
-              padding: "5px",
-              left: "15px",
+              marginLeft: '15px',
+              marginBottom: '30px'
              
             }}
           >
@@ -108,14 +114,18 @@ function Header(props) {
             </strong>
           </div>
         </Material.Typography>
-
-        {/* {getList()} */}
         <Material.Divider />
+
+        {/* ===============BOTTOM MENU=============== */}
+        <Material.Box sx={menuStyle}>
         {getList()}
+        </Material.Box>
       </Material.Drawer>
     </>
   );
 }
+
+
 // {_______DRAWER OPTION__________}
 //    return (
 //       <React.Fragment>
