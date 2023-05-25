@@ -8,10 +8,10 @@ import { ThemeProvider } from "@mui/material/styles";
 //  Function to render Landing component
 function Landing(props) {
   // function that handles the on click event of the button and renders About component
-  function handleClick() {
-    console.log("handler");
-    props.setCurrentPage("About");
-  }
+   const handleClick = () => {
+       console.log('handler');
+       props.setCurrentPage('About');
+   };
 
   // ========================STYLING============================
   const mediaSize = Material.useMediaQuery("(min-width:900px)");

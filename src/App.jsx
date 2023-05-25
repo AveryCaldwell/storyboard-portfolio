@@ -9,14 +9,17 @@ import Box from '@mui/system/Box';
 import Header from './components/Header';
 import Landing from './components/Landing';
 import About from './components/About';
-
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Resume from './components/Resume';
+import Contact from './components/Contact';
 // This function renders main content of web app
 function App() {
     const [currentPage, setCurrentPage] = React.useState('Landing');
     // may need callback function later
-    const setCurrentPageCallback = React.useCallback(() => {
-        setCurrentPage(page);
-    }, [currentPage]);
+    // const setCurrentPageCallback = React.useCallback(() => {
+    //     setCurrentPage(page);
+    // }, [currentPage]);
     return (
         <>
             {/* FIXME : theming */}
@@ -44,7 +47,26 @@ function App() {
                                 currentPage={currentPage}
                                 setCurrentPage={setCurrentPage}
                             />
-                            <About currentPage={currentPage} />
+                            <About
+                                currentPage={currentPage}
+                                setCurrentPage={setCurrentPage}
+                            />
+                            <Projects
+                                currentPage={currentPage}
+                                setCurrentPage={setCurrentPage}
+                            />
+                            <Skills
+                                currentPage={currentPage}
+                                setCurrentPage={setCurrentPage}
+                            />
+                            <Resume
+                                currentPage={currentPage}
+                                setCurrentPage={setCurrentPage}
+                            />
+                            <Contact
+                                currentPage={currentPage}
+                                setCurrentPage={setCurrentPage}
+                            />
                         </Box>
                     </main>
                 </div>

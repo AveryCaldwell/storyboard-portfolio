@@ -10,12 +10,12 @@ import theme from '../theme';
 // IMAGE
 import avesEmote from '../assets/aves_peace.png';
 
-//  Function to render About component
-function About(props) {
-    const handleClick = () => {
-        console.log('handler');
-        props.setCurrentPage('Projects');
-    };
+//  Function to render Resume component
+function Resume(props) {
+    function handleClick() {
+        console.log('Resume handler');
+        props.setCurrentPage('Contact');
+    }
     // Media query for sizing
     const mediaSize = Material.useMediaQuery('(min-width:900px)');
     const boxStyle = [
@@ -32,23 +32,10 @@ function About(props) {
             overflow: 'scroll',
         },
     ];
-    // FIXME cant get imageStyle to work on image
-    //   const imageStyle = [
-    //     {
-    //       height: "150px",
-    //       width: "150px",
-    //       // FIXME: theming
-    //       borderRadius: '300px',
-    //       border: "2px solid #e9f4e9",
-    //       boxShadow: 5,
-    //       cursor: "pointer",
-    //       position: "relative",
-    //     },
-    //   ];
 
     return (
         <React.Fragment>
-            {props.currentPage === 'About' && (
+            {props.currentPage === 'Resume' && (
                 <ThemeProvider theme={theme}>
                     <Material.Box className='aboutBox' sx={boxStyle}>
                         <Material.Typography
@@ -61,7 +48,7 @@ function About(props) {
                                 position: 'absolute',
                             }}
                         >
-                            About
+                            Resume
                         </Material.Typography>
                         <br />
 
@@ -113,7 +100,6 @@ function About(props) {
                                 </Material.Grid>
                                 <br />
                                 <Material.Grid item m>
-                                    {/* FIXME do a .map to cycle through the list of items? */}
                                     <CreateIcon></CreateIcon>
                                     <Material.Typography
                                         variant='h5'
@@ -137,7 +123,7 @@ function About(props) {
                                 onClick={() => handleClick()}
                                 variant='contained'
                             >
-                                See my projects!
+                                Contact Me!
                             </Material.Button>
                         </Material.Box>
                     </Material.Box>
@@ -147,4 +133,4 @@ function About(props) {
     );
 }
 
-export default About;
+export default Resume;
