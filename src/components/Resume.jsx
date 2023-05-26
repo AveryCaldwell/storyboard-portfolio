@@ -8,7 +8,7 @@ import ColorLensIcon from '@mui/icons-material/ColorLens';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../theme';
 // IMAGE
-import avesEmote from '../assets/aves_peace.png';
+import avesEmote from '../assets/lurk.png';
 
 //  Function to render Resume component
 function Resume(props) {
@@ -17,7 +17,7 @@ function Resume(props) {
         props.setCurrentPage('Contact');
     }
     // Media query for sizing
-    const mediaSize = Material.useMediaQuery('(min-width:900px)');
+    // const mediaSize = Material.useMediaQuery('(min-width:900px)');
     const boxStyle = [
         {
             width: 'calc(100% - 120px)',

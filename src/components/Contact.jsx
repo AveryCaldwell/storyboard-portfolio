@@ -97,26 +97,23 @@ function Contact(props) {
                                         variant='outlined'
                                         defaultValue='Name'
                                     />
-                                    <Material.TextField
-                                        type='text'
-                                        variant='outlined'
-                                        defaultValue='Enter Message'
-                                    />
+
                                     <form onSubmit={handleSubmit}>
                                         <Material.TextField label='Your message' />
                                     </form>
                                     <Material.Button
+                                        variant='contained'
                                         onClick={() => handleClick()}
                                     >
+                                        {' '}
                                         Send Message
                                     </Material.Button>
                                     {/* FIXME: add a popup like breadcrumb or something that says message sent */}
                                     <Material.FormGroup>
-                                        <Material.Checkbox
-                                            defaultChecked
-                                            color='secondary'
-                                        />
-                                        <Material.Checkbox color='secondary' />
+                                        Did you like this portfolio?
+                                        <Material.Checkbox color='primary' />{' '}
+                                        Yes
+                                        <Material.Checkbox color='error' /> No
                                     </Material.FormGroup>
                                 </Material.FormControl>
                             </Material.Card>

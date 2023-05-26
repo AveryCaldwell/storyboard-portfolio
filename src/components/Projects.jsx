@@ -121,6 +121,12 @@ function Projects(props) {
                                     key={index}
                                     sx={{ maxWidth: 345 }}
                                 >
+                                    <Material.Button
+                                        onClick={() => handleClick()}
+                                        variant='contained'
+                                    >
+                                        See my Skills!
+                                    </Material.Button>
                                     <Material.CardHeader
                                         avatar={
                                             <Material.Avatar
@@ -155,12 +161,12 @@ function Projects(props) {
                                     ></Material.CardActions>
                                 </Material.Card>
                             ))}
-                            <Material.Button
+                            {/* <Material.Button
                                 onClick={() => handleClick()}
                                 variant='contained'
                             >
                                 See my Skills!
-                            </Material.Button>
+                            </Material.Button> */}
                         </Material.Box>
                     </>
                 )}
