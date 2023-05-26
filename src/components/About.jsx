@@ -1,9 +1,7 @@
 import * as React from 'react';
 import * as Material from '@mui/material';
 // import * as Icons from '@mui/icons-material';
-import SettingsIcon from '@mui/icons-material/Settings';
 import CreateIcon from '@mui/icons-material/Create';
-import ColorLensIcon from '@mui/icons-material/ColorLens';
 // MUI theme
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../theme';
