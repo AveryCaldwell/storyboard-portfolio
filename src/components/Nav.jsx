@@ -59,6 +59,8 @@ const menuStyle = [
         marginLeft: 'auto',
     },
 ];
+
+// Contains the Menu icons for open and close
 const DrawerHeader = styled('div')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
@@ -106,8 +108,13 @@ function Navbar(props) {
     };
 
     return (
-        <Material.Box sx={{ display: 'flex' }}>
+        // ========= Entire Navbar Starts =================
+        <Material.Box
+            className='pageBox'
+            sx={{ display: 'flex', overflow: 'none' }}
+        >
             <Material.CssBaseline />
+            {/* =============== APP BAR =============== */}
             <AppBar position='fixed' open={open}>
                 <Material.Toolbar>
                     <Material.IconButton
@@ -120,18 +127,20 @@ function Navbar(props) {
                         <MenuIcon />
                     </Material.IconButton>
                     <Material.Typography variant='h6' noWrap component='div'>
-                        Avery Caldwell
+                        <strong>Avery Caldwell</strong>
                     </Material.Typography>
                     <br />
                     <Material.Typography
-                        variant='subtitle'
+                        variant='subtitle2'
                         noWrap
                         component='div'
+                        sx={{ paddingLeft: 2 }}
                     >
                         Full Stack Developer
                     </Material.Typography>
                 </Material.Toolbar>
             </AppBar>
+            {/* ===============TOP MENU=============== */}
             <Material.Drawer
                 sx={{
                     justifyContent: 'center',
@@ -165,6 +174,7 @@ function Navbar(props) {
                         width: '250px',
                     }}
                 >
+                    {/* ==========LOGO========= */}
                     <img
                         src={avesLogo}
                         style={{
@@ -183,7 +193,6 @@ function Navbar(props) {
                         alt='AvesLogo'
                     />
                 </Material.Box>
-                {/* ===============TOP MENU=============== */}
                 <Material.Typography
                     variant='h6'
                     component='div'
@@ -207,6 +216,7 @@ function Navbar(props) {
                     </div>
                 </Material.Typography>
                 <Material.Divider />
+                {/* =============== BOTTOM MENU=============== */}
                 <Material.Box sx={menuStyle}>{getList()}</Material.Box>
             </Material.Drawer>
         </Material.Box>
