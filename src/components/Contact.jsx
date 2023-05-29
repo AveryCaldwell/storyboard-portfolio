@@ -4,7 +4,7 @@ import avesEmote from '../assets/question.png';
 import * as Material from '@mui/material';
 import theme from '../theme';
 import { ThemeProvider } from '@mui/material/styles';
-
+import { boxStyle } from './Styles';
 //  Function to render Landing component
 function Contact(props) {
     const mediaSize = Material.useMediaQuery('(min-width:900px)');
@@ -18,15 +18,15 @@ function Contact(props) {
         props.setCurrentPage('About');
     };
 
-    const boxStyle = [
-        {
-            width: 'calc(100% - 200px)',
-            display: 'flex',
-            justifyContent: 'center',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-        },
-    ];
+    // const boxStyle = [
+    //     {
+    //         width: 'calc(100% - 200px)',
+    //         display: 'flex',
+    //         justifyContent: 'center',
+    //         marginLeft: 'auto',
+    //         marginRight: 'auto',
+    //     },
+    // ];
     const cardStyle = [
         {
             display: mediaSize ? 'flex' : 'block',

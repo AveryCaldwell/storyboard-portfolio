@@ -1,252 +1,216 @@
-// import * as React from 'react';
-// import * as Material from '@mui/material';
-// import * as IconsMaterial from '@mui/icons-material';
-// import avesLogo from '../assets/aves-pizza.png';
+import * as React from 'react';
+import * as Material from '@mui/material';
+// import * as Icons from '@mui/icons-material';
+import avesLogo from '../assets/aves-pizza.png';
+import { styled, useTheme } from '@mui/material/styles';
 
-// function HeaderMenu(props) {
-//     //  The menu when it is clicked
-//     const [anchorEl, setAnchorEl] = React.useState(null);
-//     //  Tracks whether the menu is open or not,
-//     const open = Boolean(anchorEl);
-//     // Updates the current page when a menu item is clicked
-//     const handleClick = (event) => setAnchorEl(event.currentTarget);
-//     //  called when the menu is closed
-//     const handleClose = () => {
-//         setAnchorEl(null);
-//     };
-//     return (
-//         <React.Fragment>
-//             <Material.Tooltip title='Menu'>
-//                 {/* Menu Icon that appears at certain media size */}
-//                 <Material.IconButton
-//                     size='large'
-//                     edge='start'
-//                     color='inherit'
-//                     aria-label='menu'
-//                     sx={{ mr: 2 }}
-//                     onClick={handleClick}
-//                 >
-//                     <IconsMaterial.Menu
-//                         sx={{
-//                             color: 'white',
-//                         }}
-//                     />
-//                 </Material.IconButton>
-//             </Material.Tooltip>
+// ICONS
+// FIXME could not format icons like rest of material components
+import MuiAppBar from '@mui/material/AppBar';
+import MenuIcon from '@mui/icons-material/Menu';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import AlternateEmailOutlinedIcon from '@mui/icons-material/AlternateEmailOutlined';
+import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
+import FolderCopyOutlinedIcon from '@mui/icons-material/FolderCopyOutlined';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 
-//             <Material.Menu
-//                 anchorEl={anchorEl}
-//                 id='account-menu'
-//                 open={open}
-//                 onClose={handleClose}
-//                 onClick={handleClose}
-//                 PaperProps={{
-//                     elevation: 0,
-//                     sx: {
-//                         overflow: 'visible',
-//                         filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
-//                         mt: 1.5,
-//                         '&:before': {
-//                             content: '""',
-//                             display: 'block',
-//                             position: 'absolute',
-//                             top: 0,
-//                             right: 14,
-//                             width: 10,
-//                             height: 10,
-//                             bgcolor: 'background.paper',
-//                             transform: 'translateY(-50%) rotate(45deg)',
-//                             zIndex: 0,
-//                         },
-//                     },
-//                 }}
-//                 transformOrigin={{ horizontal: 'left', vertical: 'top' }}
-//                 anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
-//             >
-//                 {/* About tab in nav bar renders About component on click*/}
-//                 <Material.MenuItem
-//                     onClick={() => props.setCurrentPage('About')}
-//                 >
-//                     <Material.ListItemIcon>
-//                         <IconsMaterial.Person fontSize='small' />
-//                     </Material.ListItemIcon>
-//                     About Me
-//                 </Material.MenuItem>
-//                 {/* Portfolio tab in nav bar renders Portfolio component on click*/}
-//                 <Material.MenuItem
-//                     onClick={() => props.setCurrentPage('Portfolio')}
-//                 >
-//                     <Material.ListItemIcon>
-//                         <IconsMaterial.CollectionsBookmark fontSize='small' />
-//                     </Material.ListItemIcon>
-//                     Portfolio
-//                 </Material.MenuItem>
-//                 {/* Contact tab in nav bar renders Contact component on click*/}
-//                 <Material.MenuItem
-//                     onClick={() => props.setCurrentPage('Contact')}
-//                 >
-//                     <Material.ListItemIcon>
-//                         <IconsMaterial.ContactPage fontSize='small' />
-//                     </Material.ListItemIcon>
-//                     Contact
-//                 </Material.MenuItem>
-//                 {/* Resume tab in nav bar renders Resume component on click*/}
-//                 <Material.MenuItem
-//                     onClick={() => props.setCurrentPage('Resume')}
-//                 >
-//                     <Material.ListItemIcon>
-//                         <IconsMaterial.DocumentScanner fontSize='small' />
-//                     </Material.ListItemIcon>
-//                     Resume
-//                 </Material.MenuItem>
-//             </Material.Menu>
-//         </React.Fragment>
-//     );
-// }
-// Function to render Header component
-// function Header(props) {
-//     const buttonSX = {
-//         color: 'white',
-//         position: 'relative',
+const drawerWidth = 250;
 
-//         '&:before': {
-//             content: "''",
-//             position: 'absolute',
-//             width: '0',
-//             height: '2px',
-//             bottom: '-3px',
-//             left: '50%',
-//             transform: 'translate(-50%,0%)',
-//             backgroundColor: 'white',
-//             visibility: 'hidden',
-//             transition: 'all 0.3s ease-in-out',
-//         },
-//         '&:hover:before': {
-//             visibility: 'visible',
-//             width: '100%',
-//         },
-//     };
-//     const buttonSXSelected = {
-//         color: 'white',
-//         position: 'relative',
-//         borderBottom: '2px solid white',
-//         borderRadius: 0,
-//         bottom: -2,
-//     };
-//     //  Media queries
-//     const mediaSize = Material.useMediaQuery('(min-width:900px)');
-//     const mediaSmall = Material.useMediaQuery('(min-width:400px)');
-//     return (
-//         <header className='header'>
-//             <Material.Box sx={{ flexGrow: 1 }}>
-//                 <Material.AppBar position='fixed' sx={{ height: '64px' }}>
-//                     {/* Logo image */}
-//                     <Material.Toolbar>
-//                         <img
-//                             src={avesLogo}
-//                             style={{
-//                                 height: '50px',
-//                                 width: '50px',
-//                                 // FIXME: theming
-//                                 backgroundColor: 'dark',
-//                                 borderRadius: 300,
-//                                 border: '2px solid #e9f4e9',
-//                                 boxShadow: 2,
-//                                 marginRight: 10,
-//                                 cursor: 'pointer',
-//                             }}
-//                             alt='Aves Logo'
-//                             onClick={() => props.setCurrentPage('Landing')}
-//                         />
-//                         {/* Logo text */}
-//                         <Material.Typography
-//                             variant='h6'
-//                             component='div'
-//                             sx={{
-//                                 marginRight: 'auto',
-//                                 left: 0,
-//                                 // FIXME: theming
-//                                 fontWeight: 'light',
-//                                 cursor: 'pointer',
-//                             }}
-//                             onClick={() => props.setCurrentPage('Landing')}
-//                         >
-//                             <div
-//                                 style={{
-//                                     display: mediaSmall ? 'block' : 'none',
-//                                 }}
-//                             >
-//                                 <strong>Avery Caldwell</strong>, Full-Stack
-//                                 Developer
-//                             </div>
-//                             {/* Navigation */}
-//                         </Material.Typography>
-//                         {mediaSize === true && (
-//                             // conditional rendering for different media sizes
-//                             <div>
-//                                 <Material.Button
-//                                     color='inherit'
-//                                     onClick={() =>
-//                                         props.setCurrentPage('About')
-//                                     }
-//                                     sx={
-//                                         props.currentPage === 'About'
-//                                             ? buttonSXSelected
-//                                             : buttonSX
-//                                     }
-//                                 >
-//                                     About Me
-//                                 </Material.Button>
-//                                 <Material.Button
-//                                     color='inherit'
-//                                     onClick={() =>
-//                                         props.setCurrentPage('Portfolio')
-//                                     }
-//                                     sx={
-//                                         props.currentPage === 'Portfolio'
-//                                             ? buttonSXSelected
-//                                             : buttonSX
-//                                     }
-//                                 >
-//                                     Portfolio
-//                                 </Material.Button>
-//                                 <Material.Button
-//                                     color='inherit'
-//                                     onClick={() =>
-//                                         props.setCurrentPage('Contact')
-//                                     }
-//                                     sx={
-//                                         props.currentPage === 'Contact'
-//                                             ? buttonSXSelected
-//                                             : buttonSX
-//                                     }
-//                                 >
-//                                     Contact
-//                                 </Material.Button>
-//                                 <Material.Button
-//                                     color='inherit'
-//                                     onClick={() =>
-//                                         props.setCurrentPage('Resume')
-//                                     }
-//                                     sx={
-//                                         props.currentPage === 'Resume'
-//                                             ? buttonSXSelected
-//                                             : buttonSX
-//                                     }
-//                                 >
-//                                     Resume
-//                                 </Material.Button>
-//                             </div>
-//                         )}
-//                         {mediaSize !== true && (
-//                             <HeaderMenu setCurrentPage={props.setCurrentPage} />
-//                         )}
-//                     </Material.Toolbar>
-//                 </Material.AppBar>
-//             </Material.Box>
-//         </header>
-//     );
-// }
+// TRANSITION FOR OPEN AND CLOSE NAVBAR
+const AppBar = styled(MuiAppBar, {
+    shouldForwardProp: (prop) => prop !== 'open',
+})(({ theme, open }) => ({
+    transition: theme.transitions.create(['margin', 'width'], {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen,
+    }),
+    ...(open && {
+        width: `calc(100% - ${drawerWidth}px)`,
+        marginLeft: `${drawerWidth}px`,
+        transition: theme.transitions.create(['margin', 'width'], {
+            easing: theme.transitions.easing.easeOut,
+            duration: theme.transitions.duration.enteringScreen,
+        }),
+    }),
+}));
+// NAVBAR DATA
+const data = [
+    {
+        name: 'About',
+        icon: <AlternateEmailOutlinedIcon />,
+    },
+    { name: 'Contact', icon: <EmailOutlinedIcon /> },
+    { name: 'Projects', icon: <FolderCopyOutlinedIcon /> },
+    { name: 'Resume', icon: <DescriptionOutlinedIcon /> },
+    { name: 'Skills', icon: <FolderCopyOutlinedIcon /> },
+];
+// STYLING
+const menuStyle = [
+    {
+        fontSize: '10px',
+        // FIXME: theming
+        color: 'light',
+        textAlign: 'center',
+        padding: '5px',
+        minWidth: '20px',
+        marginTop: '8px',
+        marginRight: 'auto',
+        marginLeft: 'auto',
+    },
+];
+const DrawerHeader = styled('div')(({ theme }) => ({
+    display: 'flex',
+    alignItems: 'center',
+    padding: theme.spacing(0, 1),
+    // necessary for content to be below app bar
+    ...theme.mixins.toolbar,
+    justifyContent: 'flex-end',
+}));
 
-// export default Header;
+// Function to render the side navbar
+function Navbar(props) {
+    const handleClick = (targetPage) => {
+        props.setCurrentPage(targetPage);
+    };
 
+    // Function to get nav bar tabs
+    const getList = () => (
+        <div onClick={() => setOpen(false)}>
+            {data.map((item, index) => (
+                <Material.Box sx={menuStyle}>
+                    <Material.ListItem
+                        button
+                        key={index}
+                        sx={menuStyle}
+                        onClick={() => handleClick(item.name)}
+                    >
+                        <Material.ListItemIcon sx={menuStyle}>
+                            {item.icon}
+                        </Material.ListItemIcon>
+                        <Material.ListItemText primary={item.name} />
+                    </Material.ListItem>
+                </Material.Box>
+            ))}
+        </div>
+    );
+    const theme = useTheme();
+    const [open, setOpen] = React.useState(false);
+
+    const handleDrawerOpen = () => {
+        setOpen(true);
+    };
+
+    const handleDrawerClose = () => {
+        setOpen(false);
+    };
+
+    return (
+        <Material.Box sx={{ display: 'flex' }}>
+            <Material.CssBaseline />
+            <AppBar position='fixed' open={open}>
+                <Material.Toolbar>
+                    <Material.IconButton
+                        color='inherit'
+                        aria-label='open drawer'
+                        onClick={handleDrawerOpen}
+                        edge='start'
+                        sx={{ mr: 2, ...(open && { display: 'none' }) }}
+                    >
+                        <MenuIcon />
+                    </Material.IconButton>
+                    <Material.Typography variant='h6' noWrap component='div'>
+                        Avery Caldwell
+                    </Material.Typography>
+                    <br />
+                    <Material.Typography
+                        variant='subtitle'
+                        noWrap
+                        component='div'
+                    >
+                        Full Stack Developer
+                    </Material.Typography>
+                </Material.Toolbar>
+            </AppBar>
+            <Material.Drawer
+                sx={{
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    width: drawerWidth,
+                    flexShrink: 0,
+                    '& .MuiDrawer-paper': {
+                        width: drawerWidth,
+                        boxSizing: 'border-box',
+                    },
+                }}
+                variant='persistent'
+                anchor='left'
+                open={open}
+            >
+                <DrawerHeader>
+                    <Material.IconButton onClick={handleDrawerClose}>
+                        {theme.direction === 'ltr' ? (
+                            <ChevronLeftIcon />
+                        ) : (
+                            <ChevronRightIcon />
+                        )}
+                    </Material.IconButton>
+                </DrawerHeader>
+                <Material.Divider />
+                <Material.Box
+                    className='navBox'
+                    sx={{
+                        display: 'flex',
+                        cursor: 'pointer',
+                        width: '250px',
+                    }}
+                >
+                    <img
+                        src={avesLogo}
+                        style={{
+                            height: '150px',
+                            width: '150px',
+                            backgroundColor: 'dark',
+                            borderRadius: 300,
+                            border: '2px solid #e9f4e9',
+                            boxShadow: 2,
+                            left: 'calc(50% - 75px)',
+                            marginLeft: 'auto',
+                            marginRight: 'auto',
+                            cursor: 'pointer',
+                            marginBottom: '20px',
+                        }}
+                        alt='AvesLogo'
+                    />
+                </Material.Box>
+                {/* ===============TOP MENU=============== */}
+                <Material.Typography
+                    variant='h6'
+                    component='div'
+                    sx={{
+                        marginRight: 'auto',
+                        marginLeft: 'auto',
+                        // left: 0,
+                        fontWeight: 'light',
+                        cursor: 'pointer',
+                    }}
+                    onClick={() => handleClick('Landing')}
+                >
+                    <div
+                        style={{
+                            fontSize: '14px',
+                            marginLeft: '15px',
+                            marginBottom: '30px',
+                        }}
+                    >
+                        <strong>Avery Caldwell</strong>
+                    </div>
+                </Material.Typography>
+                <Material.Divider />
+                <Material.Box sx={menuStyle}>{getList()}</Material.Box>
+            </Material.Drawer>
+        </Material.Box>
+    );
+}
+
+export default Navbar;

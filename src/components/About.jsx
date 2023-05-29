@@ -5,6 +5,7 @@ import CreateIcon from '@mui/icons-material/Create';
 // MUI theme
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../theme';
+import { boxStyle } from './Styles';
 // IMAGE
 import avesEmote from '../assets/aves_peace.png';
 
@@ -16,33 +17,6 @@ function About(props) {
     };
     // Media query for sizing
     const mediaSize = Material.useMediaQuery('(min-width:900px)');
-    const boxStyle = [
-        {
-            width: 'calc(100% - 120px)',
-            display: 'flex',
-            justifyContent: 'center',
-            marginLeft: '120px',
-            padding: 10,
-            position: 'absolute',
-            borderRadius: '12px',
-            minWidth: '400px',
-            maxWidth: '1200px',
-            overflow: 'scroll',
-        },
-    ];
-    // FIXME cant get imageStyle to work on image
-    //   const imageStyle = [
-    //     {
-    //       height: "150px",
-    //       width: "150px",
-    //       // FIXME: theming
-    //       borderRadius: '300px',
-    //       border: "2px solid #e9f4e9",
-    //       boxShadow: 5,
-    //       cursor: "pointer",
-    //       position: "relative",
-    //     },
-    //   ];
 
     return (
         <React.Fragment>

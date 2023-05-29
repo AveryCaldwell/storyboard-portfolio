@@ -9,6 +9,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from '../theme';
 // IMAGE
 import avesEmote from '../assets/lurk.png';
+import { boxStyle } from './Styles';
 
 //  Function to render Resume component
 function Resume(props) {
@@ -18,20 +19,19 @@ function Resume(props) {
     }
     // Media query for sizing
     // const mediaSize = Material.useMediaQuery('(min-width:900px)');
-    const boxStyle = [
-        {
-            width: 'calc(100% - 120px)',
-            display: 'flex',
-            justifyContent: 'center',
-            marginLeft: '120px',
-            padding: 10,
-            position: 'absolute',
-            borderRadius: '12px',
-            minWidth: '400px',
-            maxWidth: '1200px',
-            overflow: 'scroll',
-        },
-    ];
+    // const boxStyle = [
+    //     {
+    //         width: 'calc(100% - 120px)',
+    //         display: 'flex',
+    //         justifyContent: 'center',
+    //         marginLeft: '120px',
+    //         padding: 10,
+    //         position: 'absolute',
+    //         borderRadius: '12px',
+    //         minWidth: '400px',
+    //         maxWidth: '1200px',
+    //     },
+    // ];
 
     return (
         <React.Fragment>

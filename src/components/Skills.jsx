@@ -7,6 +7,7 @@ import ColorLensIcon from '@mui/icons-material/ColorLens';
 // MUI theme
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../theme';
+import { boxStyle } from './Styles';
 // IMAGE
 import avesEmote from '../assets/coffee.png';
 
@@ -17,20 +18,19 @@ function Skills(props) {
         props.setCurrentPage('Resume');
     }
     // Media query for sizing
-    const boxStyle = [
-        {
-            width: 'calc(100% - 120px)',
-            display: 'flex',
-            justifyContent: 'center',
-            marginLeft: '120px',
-            padding: 10,
-            position: 'absolute',
-            borderRadius: '12px',
-            minWidth: '400px',
-            maxWidth: '1200px',
-            overflow: 'scroll',
-        },
-    ];
+    // const boxStyle = [
+    //     {
+    //         width: 'calc(100% - 120px)',
+    //         display: 'flex',
+    //         justifyContent: 'center',
+    //         marginLeft: '120px',
+    //         padding: 10,
+    //         position: 'absolute',
+    //         borderRadius: '12px',
+    //         minWidth: '400px',
+    //         maxWidth: '1200px',
+    //     },
+    // ];
 
     return (
         <React.Fragment>

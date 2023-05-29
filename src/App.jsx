@@ -6,13 +6,15 @@ import { ThemeProvider } from '@emotion/react';
 import Box from '@mui/system/Box';
 
 //Components
-import Header from './components/Header';
+// import Header from './components/Header';
 import Landing from './components/Landing';
 import About from './components/About';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
+import Nav from './components/Nav';
+
 // This function renders main content of web app
 function App() {
     const [currentPage, setCurrentPage] = React.useState('Landing');
@@ -36,7 +38,12 @@ function App() {
                         top: 0,
                     }}
                 >
-                    <Header
+                    {/* <Header
+                        // setCurrentPageCallback={setCurrentPageCallback}
+                        setCurrentPage={setCurrentPage}
+                        currentPage={currentPage}
+                    /> */}
+                    <Nav
                         // setCurrentPageCallback={setCurrentPageCallback}
                         setCurrentPage={setCurrentPage}
                         currentPage={currentPage}

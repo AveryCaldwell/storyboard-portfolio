@@ -15,6 +15,7 @@ import { blue } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { boxStyle } from './Styles';
 // IMAGES
 import buds from '../assets/buds.png';
 import team from '../assets/team.png';
@@ -43,20 +44,19 @@ function Projects(props) {
             flexDirection: 'column',
         },
     ];
-    const boxStyle = [
-        {
-            width: 'calc(100% - 120px)',
-            display: 'flex',
-            justifyContent: 'center',
-            marginLeft: '120px',
-            padding: 10,
-            position: 'absolute',
-            borderRadius: '12px',
-            minWidth: '400px',
-            maxWidth: '1200px',
-            overflow: 'scroll',
-        },
-    ];
+    // const boxStyle = [
+    //     {
+    //         width: 'calc(100% - 120px)',
+    //         display: 'flex',
+    //         justifyContent: 'center',
+    //         marginLeft: '120px',
+    //         padding: 10,
+    //         position: 'absolute',
+    //         borderRadius: '12px',
+    //         minWidth: '400px',
+    //         maxWidth: '1200px',
+    //     },
+    // ];
     // Array of projects
     const projects = [
         {
