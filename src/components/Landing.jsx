@@ -1,5 +1,5 @@
 import React from 'react';
-import averyLogo from '../assets/aves_peace.png';
+import averyLogo from '../assets/avery.png';
 //MUI
 import * as Material from '@mui/material';
 import theme from '../theme';
@@ -20,7 +20,6 @@ function Landing(props) {
     const cardStyle = [
         {
             display: mediaSize ? 'flex' : 'block',
-            mt: '150px',
             p: 5,
             maxWidth: '900px',
             minWidth: '400px',

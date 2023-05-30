@@ -3,7 +3,8 @@ import React from 'react';
 // MUI
 import theme from './theme';
 import { ThemeProvider } from '@emotion/react';
-import Box from '@mui/system/Box';
+import * as Material from '@mui/material';
+//import Box from '@mui/system/Box';
 
 //Components
 // import Header from './components/Header';
@@ -49,7 +50,15 @@ function App() {
                         currentPage={currentPage}
                     />
                     <main>
-                        <Box>
+                        <Material.Box
+                            sx={{
+                                width: '100%',
+                                height: '100vh',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                            }}
+                        >
                             <Landing
                                 currentPage={currentPage}
                                 setCurrentPage={setCurrentPage}
@@ -74,7 +83,7 @@ function App() {
                                 currentPage={currentPage}
                                 setCurrentPage={setCurrentPage}
                             />
-                        </Box>
+                        </Material.Box>
                     </main>
                 </div>
             </ThemeProvider>

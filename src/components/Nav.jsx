@@ -190,6 +190,10 @@ function Navbar(props) {
                             cursor: 'pointer',
                             marginBottom: '20px',
                         }}
+                        onClick={() => {
+                            handleClick('Landing');
+                            setOpen(false);
+                        }}
                         alt='AvesLogo'
                     />
                 </Material.Box>
@@ -203,7 +207,10 @@ function Navbar(props) {
                         fontWeight: 'light',
                         cursor: 'pointer',
                     }}
-                    onClick={() => handleClick('Landing')}
+                    onClick={() => {
+                        handleClick('Landing');
+                        setOpen(false);
+                    }}
                 >
                     <div
                         style={{
