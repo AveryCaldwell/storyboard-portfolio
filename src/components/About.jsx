@@ -2,7 +2,6 @@ import * as React from 'react';
 import * as Material from '@mui/material';
 import { Card } from './Card';
 // import * as Icons from '@mui/icons-material';
-// import CreateIcon from '@mui/icons-material/Create';
 // MUI theme
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../theme';
@@ -102,11 +101,7 @@ function About(props) {
                                 </Material.Grid>
                                 <Material.Grid item m></Material.Grid>
                             </Material.Grid> */}
-                    <Material.Typography variant='caption' gutterBottom>
-                        Explore my projects and let's build something amazing
-                        together! 🚀
-                    </Material.Typography>
-                    //
+
                     <Material.Button
                         onClick={() => handleClick()}
                         variant='contained'

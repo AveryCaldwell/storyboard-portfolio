@@ -5,6 +5,12 @@ import avesEmote from '../assets/aves_peace.png';
 import { boxStyle } from './Styles';
 
 export function Card(props) {
+    // TODO: need to make button work for all cards?
+    const handleClick = () => {
+        console.log('About handler');
+        props.setCurrentPage('Projects');
+    };
+    // TODO: do I need to make a data.js file?
     // Array of About card content
     const aboutData = [
         {
@@ -95,6 +101,13 @@ export function Card(props) {
                     Explore my projects and let's build something amazing
                     together! 🚀
                 </Material.Typography>
+                {/* FIXME: need to get button working on About page */}
+                <Material.Button
+                    onClick={() => handleClick()}
+                    variant='contained'
+                >
+                    See my projects!
+                </Material.Button>
             </Material.Box>
         </Material.Box>
     );
