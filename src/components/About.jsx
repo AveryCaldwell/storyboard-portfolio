@@ -1,7 +1,8 @@
 import * as React from 'react';
 import * as Material from '@mui/material';
+import { Card } from './Card';
 // import * as Icons from '@mui/icons-material';
-import CreateIcon from '@mui/icons-material/Create';
+// import CreateIcon from '@mui/icons-material/Create';
 // MUI theme
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../theme';
@@ -12,7 +13,7 @@ import avesEmote from '../assets/aves_peace.png';
 //  Function to render About component
 function About(props) {
     const handleClick = () => {
-        console.log('handler');
+        console.log('About handler');
         props.setCurrentPage('Projects');
     };
     // Media query for sizing
@@ -22,7 +23,8 @@ function About(props) {
         <React.Fragment>
             {props.currentPage === 'About' && (
                 <ThemeProvider theme={theme}>
-                    <Material.Box className='aboutBox' sx={boxStyle}>
+                    <Card />
+                    {/* <Material.Box className='aboutBox' sx={boxStyle}>
                         <Material.Typography
                             variant='h1'
                             component='h2'
@@ -85,7 +87,6 @@ function About(props) {
                                 </Material.Grid>
                                 <br />
                                 <Material.Grid item m>
-                                    {/* FIXME do a .map to cycle through the list of items? */}
                                     <CreateIcon></CreateIcon>
                                     <Material.Typography
                                         variant='h5'
@@ -100,19 +101,20 @@ function About(props) {
                                     </Material.Typography>
                                 </Material.Grid>
                                 <Material.Grid item m></Material.Grid>
-                            </Material.Grid>
-                            <Material.Typography variant='caption' gutterBottom>
-                                Explore my projects and let's build something
-                                amazing together! 🚀
-                            </Material.Typography>
-                            <Material.Button
-                                onClick={() => handleClick()}
-                                variant='contained'
-                            >
-                                See my projects!
-                            </Material.Button>
-                        </Material.Box>
-                    </Material.Box>
+                            </Material.Grid> */}
+                    <Material.Typography variant='caption' gutterBottom>
+                        Explore my projects and let's build something amazing
+                        together! 🚀
+                    </Material.Typography>
+                    //
+                    <Material.Button
+                        onClick={() => handleClick()}
+                        variant='contained'
+                    >
+                        See my projects!
+                    </Material.Button>
+                    {/* </Material.Box> */}
+                    {/* </Material.Box> */}
                 </ThemeProvider>
             )}
         </React.Fragment>

@@ -32,31 +32,7 @@ function Projects(props) {
         props.setCurrentPage('Skills');
     };
     const mediaSize = Material.useMediaQuery('(min-width:900px)');
-    const cardStyle = [
-        {
-            display: mediaSize ? 'flex' : 'block',
-            mt: '150px',
-            p: 5,
-            maxWidth: '900px',
-            minWidth: '400px',
-            flexWrap: 'no-wrap',
-            fontSize: '30px',
-            flexDirection: 'column',
-        },
-    ];
-    // const boxStyle = [
-    //     {
-    //         width: 'calc(100% - 120px)',
-    //         display: 'flex',
-    //         justifyContent: 'center',
-    //         marginLeft: '120px',
-    //         padding: 10,
-    //         position: 'absolute',
-    //         borderRadius: '12px',
-    //         minWidth: '400px',
-    //         maxWidth: '1200px',
-    //     },
-    // ];
+
     // Array of projects
     const projects = [
         {

@@ -9,22 +9,14 @@ import { boxStyle } from './Styles';
 function Landing(props) {
     // function that handles the on click event of the button and renders About component
     const handleClick = () => {
-        console.log('handler');
+        console.log('Landing handler');
         props.setCurrentPage('About');
     };
 
     // ========================STYLING============================
     const mediaSize = Material.useMediaQuery('(min-width:900px)');
-    const mediaSmall = Material.useMediaQuery('(min-width:600px)');
-    // const boxStyle = [
-    //   {
-    //     width: "calc(100% - 200px)",
-    //     display: "flex",
-    //     justifyContent: "center",
-    //     marginLeft: "auto",
-    //     marginRight: "auto",
-    //   },
-    // ];
+    // const mediaSmall = Material.useMediaQuery('(min-width:600px)');
+
     const cardStyle = [
         {
             display: mediaSize ? 'flex' : 'block',
