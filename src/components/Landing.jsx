@@ -30,14 +30,13 @@ function Landing(props) {
     ];
     const cardMediaStyle = [
         {
-            marginLeft: 'calc(100 % - 120px)',
             height: '250px',
             width: '250px',
             // FIXME theme
             backgroundColor: 'gray',
             boxShadow: 2,
             cursor: 'pointer',
-            borderRadius: '16px',
+            borderRadius: '26px',
             border: '1px solid rgba(255, 255, 255, 0.3)',
             display: mediaSize ? 'flex' : 'none',
             mx: 'auto',
