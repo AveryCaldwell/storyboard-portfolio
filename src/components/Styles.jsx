@@ -17,7 +17,6 @@ export const cardStyle = [
         minWidth: '375px',
         marginLeft: 'auto',
         marginRight: 'auto',
-        width: '750px',
         display: 'flex',
         alignItems: 'center',
         borderRadius: '12px',
@@ -27,6 +26,7 @@ export const cardStyle = [
         backgroundColor: 'gray',
         boxShadow: 5,
         textAlign: 'center',
+        marginTop: 5,
     },
 ];
 export const cardHeaderStyle = [
