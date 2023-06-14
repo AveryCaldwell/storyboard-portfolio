@@ -3,7 +3,7 @@ import React from 'react';
 import * as Material from '@mui/material';
 import theme from '../theme';
 import { ThemeProvider } from '@mui/material/styles';
-import { blue } from '@mui/material/colors';
+import { blue, green, teal, pink, purple, orange } from '@mui/material/colors';
 import { boxStyle } from './Styles';
 // IMAGES
 import buds from '../assets/buds.png';
@@ -25,52 +25,52 @@ function Projects(props) {
     // Array of projects
     const projects = [
         {
-            avatarColor: blue[500],
+            avatarColor: blue[100],
             title: 'TasteBuds',
             subheader: 'Project 3',
             image: buds,
             description:
-                'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
+                'A social media app that allows users to never dine alone again! This app allows the user to create a profile, see other users posts, create posts, and join other events!',
         },
         {
-            avatarColor: blue[500],
+            avatarColor: orange[200],
             title: 'CheersCheck',
             subheader: 'Project 2',
             image: CC,
             description:
-                'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
+                'A new liquor inventory application - the perfect tool for anyone who enjoys keeping track of their favorite spirits! You can easily organize your liquor collection, keep track of what you have on hand, and share it with your friends.',
         },
         {
-            avatarColor: blue[500],
+            avatarColor: green[300],
             title: 'WearYouWander',
             subheader: 'Project 1',
             image: WYW,
             description:
-                'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
+                'An application that analyzes the weather and suggests which type of outerwear would be most suitable.',
         },
         {
-            avatarColor: blue[500],
+            avatarColor: pink[400],
             title: 'TechBlog',
             subheader: 'MVC',
             image: team,
             description:
-                'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
+                'CMS-style blog site where developers can publish their blog posts & comment on other developers’ posts as well. Using Handlebars.js as the templating language, Sequelize as the ORM, and express-session npm package for authentication.',
         },
         {
-            avatarColor: blue[500],
+            avatarColor: teal[500],
             title: 'Weather',
             subheader: 'FrontEnd',
             image: weather,
             description:
-                'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
+                'A weather app that includes a search option, a list of cities, and a five-day forecast and current weather conditions for any city.',
         },
         {
-            avatarColor: blue[500],
+            avatarColor: purple[600],
             title: 'Work',
             subheader: 'BackEnd',
             image: work,
             description:
-                'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
+                "A command-line application that manages a company's employee database, using Node.js, Inquirer, and MySQL.",
         },
     ];
 
