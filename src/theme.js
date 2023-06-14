@@ -104,6 +104,16 @@ const theme = createTheme({
     // secondary: {
     //     main: '#ff4081',
     // },
+    MuiCard: {
+        root: {
+            ' & .hidden-button': {
+                display: 'none',
+            },
+            '&:hover .hidden-button': {
+                display: 'flex',
+            },
+        },
+    },
 });
 
 export default theme;

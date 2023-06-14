@@ -10,13 +10,9 @@ export function Card(props) {
             <Material.CardHeader
                 titleTypographyProps={{ variant: 'h2' }} //changes font size
                 title={props.data.title}
-
                 className='cardTitle'
                 sx={cardHeaderStyle}
-            >
-                {props.data.title}
-
-            </Material.CardHeader>
+            ></Material.CardHeader>
             <br />
             <Material.CardMedia className='cardContent' sx={cardMediaStyle}>
                 <img
@@ -43,21 +39,14 @@ export function Card(props) {
                     variant='body1'
                     gutterBottom
                     className='cardSubtitle'
-                    description={props.data.subtitle}
-
-                >
-
-                </Material.Typography>
+                ></Material.Typography>
                 <br />
                 <Material.Typography
                     variant='body2'
                     gutterBottom
                     className='cardDescription'
-                    description={props.data.description}
-
                 >
                     {props.data.description}
-
                 </Material.Typography>
                 {props.children}
             </Material.CardContent>

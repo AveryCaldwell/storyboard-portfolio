@@ -3,18 +3,7 @@ import React from 'react';
 import * as Material from '@mui/material';
 import theme from '../theme';
 import { ThemeProvider } from '@mui/material/styles';
-import Card from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardMedia';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import Avatar from '@mui/material/Avatar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import { blue } from '@mui/material/colors';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { boxStyle } from './Styles';
 // IMAGES
 import buds from '../assets/buds.png';
@@ -39,7 +28,7 @@ function Projects(props) {
             avatarColor: blue[500],
             title: 'TasteBuds',
             subheader: 'Project 3',
-            image: { buds },
+            image: buds,
             description:
                 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
         },
@@ -47,7 +36,7 @@ function Projects(props) {
             avatarColor: blue[500],
             title: 'CheersCheck',
             subheader: 'Project 2',
-            image: { CC },
+            image: CC,
             description:
                 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
         },
@@ -55,7 +44,7 @@ function Projects(props) {
             avatarColor: blue[500],
             title: 'WearYouWander',
             subheader: 'Project 1',
-            image: { WYW },
+            image: WYW,
             description:
                 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
         },
@@ -63,7 +52,7 @@ function Projects(props) {
             avatarColor: blue[500],
             title: 'TechBlog',
             subheader: 'MVC',
-            image: { team },
+            image: team,
             description:
                 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
         },
@@ -71,7 +60,7 @@ function Projects(props) {
             avatarColor: blue[500],
             title: 'Weather',
             subheader: 'FrontEnd',
-            image: { weather },
+            image: weather,
             description:
                 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
         },
@@ -79,7 +68,7 @@ function Projects(props) {
             avatarColor: blue[500],
             title: 'Work',
             subheader: 'BackEnd',
-            image: { work },
+            image: work,
             description:
                 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
         },

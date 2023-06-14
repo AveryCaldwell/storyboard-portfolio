@@ -32,7 +32,7 @@ export const cardStyle = [
 export const cardHeaderStyle = [
     {
         textAlign: 'center',
-        border: ' 10px double white',
+        border: ' 5px double white',
         backgroundColor: 'white',
         width: '100%',
         color: 'black',

@@ -80,10 +80,10 @@ function Navbar(props) {
     const getList = () => (
         <div onClick={() => setOpen(false)}>
             {data.map((item, index) => (
-                <Material.Box sx={menuStyle}>
+                <Material.Box key={item.name} sx={menuStyle}>
                     <Material.ListItem
                         button
-                        key={index}
+                        key={item.name} //Assigns a unique key based on the item name
                         sx={menuStyle}
                         onClick={() => handleClick(item.name)}
                     >
