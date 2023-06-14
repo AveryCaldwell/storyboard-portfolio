@@ -11,7 +11,7 @@ import avesEmote from '../assets/aves_peace.png';
 //  Function to render About component
 function Content(props) {
     const handleClick = () => {
-        console.log('About handler');
+        // console.log('About handler');
         props.setCurrentPage('Projects');
     };
     //This is where you add content for the card.

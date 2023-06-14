@@ -17,26 +17,29 @@ import avesBack from '../assets/avesBack.png';
 
 function Content(props) {
     const handleClick = () => {
-        console.log('Skills handler');
+        // console.log('Skills handler');
         props.setCurrentPage('Resume');
     };
     //This is where you add content for the card.
-    return (
-        <>
-            <Material.Button
-                className=''
-                sx={cardButtonStyle}
-                onClick={() => handleClick()}
-                variant='contained'
-            >
-                Show Me More!
-            </Material.Button>
-        </>
-    );
+    // return (
+    // <>
+    //     <Material.Button
+    //         className=''
+    //         sx={cardButtonStyle}
+    //         onClick={() => handleClick()}
+    //         variant='contained'
+    //     >
+    //         Show Me More!
+    //     </Material.Button>
+    // </>
+    // );
 }
 
 //  Function to render Skills component
 function Skills(props) {
+    const handleClick = (targetPage) => {
+        props.setCurrentPage(targetPage);
+    };
     // function handleClick() {
     //     console.log('Skills handler');
     //     props.setCurrentPage('Resume');
@@ -67,8 +70,9 @@ function Skills(props) {
             },
         ],
     };
-    console.log(skillsData); // Check if skillsData is populated correctly
-
+    // Check if skillsData is populated correctly
+    // console.log(skillsData);
+    // TODO: make images lead to examples, whether that be github repos, or projects filtered?
     return (
         <React.Fragment>
             {props.currentPage === 'Skills' && (

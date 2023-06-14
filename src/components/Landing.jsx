@@ -9,7 +9,7 @@ import { boxStyle } from './Styles';
 function Landing(props) {
     // function that handles the on click event of the button and renders About component
     const handleClick = () => {
-        console.log('Landing handler');
+        // console.log('Landing handler');
         props.setCurrentPage('About');
     };
 
