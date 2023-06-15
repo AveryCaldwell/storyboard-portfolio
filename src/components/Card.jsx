@@ -39,16 +39,20 @@ export function Card(props) {
                     variant='body1'
                     gutterBottom
                     className='cardSubtitle'
-                ></Material.Typography>
-                <br />
+                    title={props.data.subtitle}
+                >
+                    {props.data.subtitle}
+                </Material.Typography>
                 <Material.Typography
                     variant='body2'
                     gutterBottom
                     className='cardDescription'
                 >
-                    {props.data.description}
+                    {props.data.description.map((item, index) => (
+                        <li key={index}>{item}</li>
+                    ))}
+                    {/* {props.data.description} */}
                 </Material.Typography>
-                {props.children}
             </Material.CardContent>
         </Material.Card>
     );
