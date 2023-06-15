@@ -11,17 +11,13 @@ import avesFront from '../assets/avesFront.png';
 import avesBack from '../assets/avesBack.png';
 
 function Content(props) {
-    const handleClick = () => {
-        // console.log('Skills handler');
-        props.setCurrentPage('Resume');
-    };
     //This is where you add content for the card.
     return (
         <>
             <Material.Button
                 className=''
                 sx={cardButtonStyle}
-                onClick={() => handleClick()}
+                onClick={props.handleClick}
                 variant='contained'
             >
                 Show Me More!
@@ -35,10 +31,7 @@ function Skills(props) {
     const handleClick = (targetPage) => {
         props.setCurrentPage(targetPage);
     };
-    // function handleClick() {
-    //     console.log('Skills handler');
-    //     props.setCurrentPage('Resume');
-    // }
+
     const skillsData = {
         creator: [
             {
@@ -120,6 +113,7 @@ function Skills(props) {
                             <Content />
                         </Card>
                     ))}
+                    <Content handleClick={() => handleClick('Resume')} />
                 </ThemeProvider>
             )}
         </React.Fragment>
