@@ -4,9 +4,16 @@ import avesEmote from '../assets/aves_peace.png';
 // MUI theme
 import { cardStyle, cardHeaderStyle, cardMediaStyle } from './Styles';
 export function Card(props) {
+    const data = {
+        title: 'Card Title',
+        image: 'path/to/image.png',
+        subtitle: 'Card Subtitle',
+        description: ['Description 1', 'Description 2', 'Description 3'],
+    };
+
     // function that inserts data into card component
     return (
-        <Material.Card className='card' sx={cardStyle}>
+        <Material.Card className='card' sx={cardStyle} data={data}>
             <Material.CardHeader
                 titleTypographyProps={{ variant: 'h2' }} //changes font size
                 title={props.data.title}
@@ -51,7 +58,7 @@ export function Card(props) {
                     {props.data.description.map((item, index) => (
                         <li key={index}>{item}</li>
                     ))}
-                    {/* {props.data.description} */}
+                    {props.children} {/* Render children */}
                 </Material.Typography>
             </Material.CardContent>
         </Material.Card>

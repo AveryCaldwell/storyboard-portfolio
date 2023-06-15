@@ -39,8 +39,9 @@ function About(props) {
         image: avesEmote,
         subtitle:
             'Hi there! I am Avery. I grew up in the South but recently moved to Seattle, WA last October to attend the University of Washington coding bootcamp. After working 5 years in the banking industry, I wanted a change. So I threw comfort out the window, moved across the country, and dove into something I never thought I could do, programming! ',
-        description:
+        description: [
             'Thanks to my marketing degree, I make blending design and coding skills look EZ. But when I am not coding, I am creating content, watching trash reality tv, exploring and gaming. Another passion of mine is mental health. For the past 2 years, I have raised over $3,000 for the American Foundation for Suicide Prevention with the help of the online community that I created.',
+        ],
     };
 
     return (
