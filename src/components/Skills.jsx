@@ -99,19 +99,13 @@ function Skills(props) {
             {props.currentPage === 'Skills' && (
                 <ThemeProvider theme={theme}>
                     {skillsData.creator.map((data, index) => (
-                        <Card key={index} data={data}>
-                            <Content />
-                        </Card>
+                        <Card key={index} data={data}></Card>
                     ))}
                     {skillsData.frontend.map((data, index) => (
-                        <Card key={index} data={data}>
-                            <Content />
-                        </Card>
+                        <Card key={index} data={data}></Card>
                     ))}
                     {skillsData.backend.map((data, index) => (
-                        <Card key={index} data={data}>
-                            <Content />
-                        </Card>
+                        <Card key={index} data={data}></Card>
                     ))}
                     <Content handleClick={() => handleClick('Resume')} />
                 </ThemeProvider>

@@ -23,7 +23,7 @@ export const cardStyle = [
         flexDirection: 'column',
         overflow: 'visible',
         height: 'max-content',
-        backgroundColor: 'gray',
+        // backgroundColor: 'gray',
         boxShadow: 5,
         textAlign: 'center',
         marginTop: 5,
@@ -32,7 +32,7 @@ export const cardStyle = [
 export const cardHeaderStyle = [
     {
         textAlign: 'center',
-        border: ' 5px double white',
+        border: ' 3px double white',
         backgroundColor: 'white',
         width: '100%',
         color: 'black',
