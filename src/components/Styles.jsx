@@ -74,3 +74,28 @@ export const cardListStyle = [
         columnFill: 'balance',
     },
 ];
+export const formStyle = [
+    {
+        width: '500px',
+        minWidth: '375px',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        display: 'flex',
+        alignItems: 'center',
+        borderRadius: '12px',
+        flexDirection: 'column',
+        boxShadow: 5,
+        textAlign: 'center',
+        padding: '15px',
+    },
+];
+export const formHeaderStyle = {
+    textAlign: 'center',
+    color: 'black',
+    borderRadius: '12px',
+    margin: '20px',
+};
+
+export const formTextFieldStyle = {
+    width: '100%',
+};
