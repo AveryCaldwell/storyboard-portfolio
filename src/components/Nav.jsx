@@ -40,17 +40,17 @@ const data = [
         name: 'About',
         icon: <AlternateEmailOutlinedIcon />,
     },
-    { name: 'Contact', icon: <EmailOutlinedIcon /> },
     { name: 'Projects', icon: <FolderCopyOutlinedIcon /> },
     { name: 'Resume', icon: <DescriptionOutlinedIcon /> },
     { name: 'Skills', icon: <FolderCopyOutlinedIcon /> },
+    { name: 'Contact', icon: <EmailOutlinedIcon /> },
 ];
 // STYLING
 const menuStyle = [
     {
         fontSize: '10px',
         // FIXME: theming
-        color: 'light',
+        color: 'white',
         textAlign: 'center',
         padding: '5px',
         minWidth: '20px',
