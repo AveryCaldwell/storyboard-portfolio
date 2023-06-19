@@ -16,12 +16,22 @@ function Content(props) {
         <>
             {/* FIXME - MAKE RESUME DOWNLOADABLE */}
             <Material.Button
-                className=''
+                className='downloadBtn'
+                sx={cardButtonStyle}
+                // onClick={props.handleClick}
+                variant='contained'
+            >
+                <a href='../../public/files/resume.pdf' download>
+                    Click to download
+                </a>
+            </Material.Button>
+            <Material.Button
+                className='toContactBtn'
                 sx={cardButtonStyle}
                 onClick={props.handleClick}
                 variant='contained'
             >
-                Download Resume!
+                Contact Me!
             </Material.Button>
         </>
     );
@@ -101,49 +111,62 @@ function Resume(props) {
         <React.Fragment>
             {props.currentPage === 'Resume' && (
                 <ThemeProvider theme={theme}>
-                    <Material.Typography
-                        variant='h1'
+                    <Material.Grid
+                        container
+                        spacing={4}
                         sx={{
-                            textAlign: 'center',
-                            padding: 1,
-                            marginLeft: 'auto',
-                            marginRight: 'auto',
-                            alignItems: 'center',
+                            display: 'flex',
+                            maxWidth: '1200px',
+                            flexWrap: 'wrap',
+                            justifyContent: 'space-evenly',
+                            height: '100vh',
+                            overflow: 'scroll',
                         }}
                     >
-                        Resume
-                    </Material.Typography>
-                    {/* INFO */}
-                    {resumeData.info.map((data, index) => (
-                        <Card key={index} data={data}>
-                            {/* <Content /> */}
-                        </Card>
-                    ))}
-                    {/* TECHNICAL */}
-                    {resumeData.technical.map((data, index) => (
-                        <Card key={index} data={data}>
-                            {/* <Content /> */}
-                        </Card>
-                    ))}
-                    {/* PROJECTS */}
-                    {resumeData.projects.map((data, index) => (
-                        <Card key={index} data={data}>
-                            {/* <Content /> */}
-                        </Card>
-                    ))}
-                    {/* EXPERIENCE */}
-                    {resumeData.experience.map((data, index) => (
-                        <Card key={index} data={data}>
-                            {/* <Content /> */}
-                        </Card>
-                    ))}
-                    {/* EDUCATION */}
-                    {resumeData.education.map((data, index) => (
-                        <Card key={index} data={data}>
-                            {/* <Content /> */}
-                        </Card>
-                    ))}
-                    <Content handleClick={() => handleClick('Contact')} />
+                        <Material.Typography
+                            variant='h1'
+                            sx={{
+                                textAlign: 'center',
+                                padding: 1,
+                                marginLeft: 'auto',
+                                marginRight: 'auto',
+                                alignItems: 'center',
+                            }}
+                        >
+                            Resume
+                        </Material.Typography>
+                        {/* INFO */}
+                        {resumeData.info.map((data, index) => (
+                            <Card key={index} data={data}>
+                                {/* <Content /> */}
+                            </Card>
+                        ))}
+                        {/* TECHNICAL */}
+                        {resumeData.technical.map((data, index) => (
+                            <Card key={index} data={data}>
+                                {/* <Content /> */}
+                            </Card>
+                        ))}
+                        {/* PROJECTS */}
+                        {resumeData.projects.map((data, index) => (
+                            <Card key={index} data={data}>
+                                {/* <Content /> */}
+                            </Card>
+                        ))}
+                        {/* EXPERIENCE */}
+                        {resumeData.experience.map((data, index) => (
+                            <Card key={index} data={data}>
+                                {/* <Content /> */}
+                            </Card>
+                        ))}
+                        {/* EDUCATION */}
+                        {resumeData.education.map((data, index) => (
+                            <Card key={index} data={data}>
+                                {/* <Content /> */}
+                            </Card>
+                        ))}
+                        <Content handleClick={() => handleClick('Contact')} />
+                    </Material.Grid>
                 </ThemeProvider>
             )}
         </React.Fragment>

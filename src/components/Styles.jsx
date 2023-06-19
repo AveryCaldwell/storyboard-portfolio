@@ -23,7 +23,6 @@ export const cardStyle = [
         flexDirection: 'column',
         overflow: 'visible',
         height: 'max-content',
-        // backgroundColor: 'gray',
         boxShadow: 5,
         textAlign: 'center',
         marginTop: 5,
@@ -32,7 +31,7 @@ export const cardStyle = [
 export const cardHeaderStyle = [
     {
         textAlign: 'center',
-        border: ' 3px double white',
+        border: ' 1px double white',
         backgroundColor: 'white',
         width: '100%',
         color: 'black',
@@ -49,7 +48,7 @@ export const cardMediaStyle = [
         borderRadius: '12px',
         alignItems: 'center',
         flexDirection: 'column',
-        padding: 1,
+        padding: '25px',
     },
 ];
 
@@ -59,7 +58,19 @@ export const cardButtonStyle = [
         marginLeft: 'auto',
         marginRight: 'auto',
         marginTop: '25px',
-        padding: 2,
+        padding: '16px',
         borderRadius: '12px',
+    },
+];
+export const cardListStyle = [
+    {
+        listStyleType: 'none',
+        columnCount: '2',
+        columnGap: '15px',
+        columnRuleStyle: 'solid',
+        columnRuleWidth: '1px',
+        columnWidth: '179px',
+        lineHeight: '25px',
+        columnFill: 'balance',
     },
 ];

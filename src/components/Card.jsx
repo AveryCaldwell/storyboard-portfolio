@@ -1,8 +1,14 @@
 import * as React from 'react';
 import * as Material from '@mui/material';
-import avesEmote from '../assets/aves_peace.png';
 // MUI theme
-import { cardStyle, cardHeaderStyle, cardMediaStyle } from './Styles';
+import {
+    cardStyle,
+    cardHeaderStyle,
+    cardMediaStyle,
+    cardListStyle,
+} from './Styles';
+
+// function that generates card component
 export function Card(props) {
     const data = {
         title: 'Card Title',
@@ -37,11 +43,8 @@ export function Card(props) {
                     alt='Aves Emote'
                 />
             </Material.CardMedia>
-            <Material.CardContent
-                sx={{
-                    lineHeight: '30px',
-                }}
-            >
+
+            <Material.CardContent>
                 <Material.Typography
                     variant='body1'
                     gutterBottom
@@ -50,8 +53,10 @@ export function Card(props) {
                 >
                     {props.data.subtitle}
                 </Material.Typography>
+                <br />
                 <Material.Typography
-                    variant='body2'
+                    sx={cardListStyle}
+                    variant='body1'
                     gutterBottom
                     className='cardDescription'
                 >

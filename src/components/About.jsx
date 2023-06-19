@@ -17,7 +17,7 @@ function Content(props) {
     //This is where you add content for the card.
     return (
         <>
-            <Material.Typography variant='caption' gutterBottom>
+            <Material.Typography variant='body1' gutterBottom>
                 Explore my projects and let's build something amazing together!
                 🚀
             </Material.Typography>

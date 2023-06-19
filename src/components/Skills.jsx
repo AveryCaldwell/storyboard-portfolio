@@ -40,9 +40,10 @@ function Skills(props) {
                 subtitle: 'Content Creation & Marketing Expertise',
                 description: [
                     'Content Creation',
-                    'Video Production/Editing',
+                    'Video Production',
+                    'Video Editing',
                     'Social Media Marketing',
-                    'Brand and Identity',
+                    'Brand & Identity',
                     'Audience Engagement',
                 ],
             },
