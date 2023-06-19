@@ -21,7 +21,7 @@ function Content(props) {
                 // onClick={props.handleClick}
                 variant='contained'
             >
-                <a href='../../public/files/resume.pdf' download>
+                <a href='../public/files/resume.pdf' download>
                     Click to download
                 </a>
             </Material.Button>
