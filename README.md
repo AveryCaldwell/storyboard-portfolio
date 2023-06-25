@@ -1,4 +1,5 @@
 # Portfolio 💼
+This is a storyboard of my post grad portfolio. Testing different libraries like Anime.js, Material UI, and different React technologies.
 
 Greetings and welcome to my personal portfolio website! I'm thrilled to present this platform where I can share my journey as a Full Stack Web Developer based in the vibrant city of Seattle. Here, you'll find an array of information about my experience, education, recent projects, technical skill set, contact details, and get a glimpse into who I am.
 
